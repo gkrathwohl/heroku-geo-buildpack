@@ -10,9 +10,6 @@ set -e
 # Clean up leaking environment
 unset GIT_DIR
 
-# set path
-export PATH="$BUILD_DIR/.heroku/vendor/bin":$PATH
- 
 # Configuration
 S3_BUCKET=${HEROKU_GEO_BUILDBACK_S3_BUCKET:-"cyberdelia-geo-buildpack"}
 
@@ -20,6 +17,9 @@ S3_BUCKET=${HEROKU_GEO_BUILDBACK_S3_BUCKET:-"cyberdelia-geo-buildpack"}
 BUILD_DIR=$1
 CACHE_DIR="${2}/${STACK}"
 
+# set path
+export PATH="$BUILD_DIR/.heroku/vendor/bin":$PATH
+ 
 # Setup profile file
 PROFILE_PATH="$BUILD_DIR/.profile.d/geo.sh"
 mkdir -p $(dirname $PROFILE_PATH)
