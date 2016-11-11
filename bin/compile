@@ -10,6 +10,9 @@ set -e
 # Clean up leaking environment
 unset GIT_DIR
 
+# set path
+export PATH="$BUILD_DIR/.heroku/vendor/bin":$PATH
+ 
 # Configuration
 S3_BUCKET=${HEROKU_GEO_BUILDBACK_S3_BUCKET:-"cyberdelia-geo-buildpack"}
 
