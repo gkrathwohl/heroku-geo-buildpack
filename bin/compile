@@ -21,6 +21,9 @@ CACHE_DIR="${2}/${STACK}"
 PROFILE_PATH="$BUILD_DIR/.profile.d/geo.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 
+# set path
+export PATH="$BUILD_DIR/.heroku/vendor/bin":$PATH
+
 # Functions
 function indent() {
   c='s/^/       /'
