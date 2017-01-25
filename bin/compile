@@ -64,6 +64,7 @@ PROJ_VERSION=$(manifest_version "proj")
 echo "Using geos version: ${GEOS_VERSION}" | indent
 echo "Using gdal version: ${GDAL_VERSION}" | indent
 echo "Using proj version: ${PROJ_VERSION}" | indent
+echo "https://${S3_BUCKET}.s3.amazonaws.com/${STACK}/$name-$version.tgz"
 
 # Vendor directories
 VENDORED_GEOS="vendor/geos/$GEOS_VERSION"
