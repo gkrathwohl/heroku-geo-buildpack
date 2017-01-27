@@ -19,6 +19,8 @@ CACHE_DIR="${2}/${STACK}"
 
 # set path
 export PATH="$BUILD_DIR/.heroku/vendor/bin":$PATH
+echo $PATH
+echo "path"
  
 # Setup profile file
 PROFILE_PATH="$BUILD_DIR/.profile.d/geo.sh"
