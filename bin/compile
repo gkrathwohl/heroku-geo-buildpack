@@ -105,6 +105,7 @@ done
 APP_VENDOR="/app/$TARGET_VENDOR_DIR"
 
 # Setup environment variables
+set-env PATH '$HOME/.heroku/vendor/bin:$PATH'
 set-env GEOS_LIBRARY_PATH "$APP_VENDOR/lib"
 set-env GDAL_LIBRARY_PATH "$APP_VENDOR/lib"
 set-env PROJ4_LIBRARY_PATH "$APP_VENDOR/lib"
